@@ -1,0 +1,24 @@
+.board-container 
+    width: 100vw
+    height: 100vh
+    background-image: url('/assets/race-stage.png')
+    background-position: center
+    background-size: cover
+    display: grid
+    grid-template-rows: 
+    grid-template-areas: "empty-top" "greenArea1" "track1" "greenArea2" "track" "greenArea3"
+    grid-gap: 1rem
+
+    .player-one 
+        display: grid
+        grid-area: track2
+        height: 100px
+    
+    .player-two
+        display: grid
+        grid-area: track1
+    
+    .game-control-container
+        grid-area: greenArea2
+        border: 1px solid green
+        height: 100px
