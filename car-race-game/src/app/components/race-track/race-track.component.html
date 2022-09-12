@@ -1,9 +1,9 @@
 <div class="race-track">
-    <app-race-track-field class="start race-track-field" [field]="{ id: 0 }">
+    <app-race-track-field class="start race-track-field">
 start
     </app-race-track-field>
         <app-race-track-field class="race-track-field"  *ngFor="let field of raceTrackFields" [field]="field"></app-race-track-field>
-    <app-race-track-field class="end race-track-field" [field]="{ id: raceTrackFields.length + 1 }">
+    <app-race-track-field class="end race-track-field">
 end
     </app-race-track-field >
 </div>
