@@ -5,14 +5,12 @@
     background-position: center
     background-size: cover
     display: grid
-    grid-template-rows: 
-    grid-template-areas: "empty-top" "greenArea1" "track1" "greenArea2" "track" "greenArea3"
-    grid-gap: 1rem
+    grid-template-rows:  20% 19% 13% 17% 19% auto
+    grid-template-areas: "empty-top" "greenArea1" "track1" "greenArea2" "track2" "greenArea3"
 
     .player-one 
         display: grid
         grid-area: track2
-        height: 100px
     
     .player-two
         display: grid
@@ -20,5 +18,3 @@
     
     .game-control-container
         grid-area: greenArea2
-        border: 1px solid green
-        height: 100px

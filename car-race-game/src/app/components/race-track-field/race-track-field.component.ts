@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { RaceTrackField } from './../../RaceTrackField';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-race-track-field',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./race-track-field.component.sass']
 })
 export class RaceTrackFieldComponent implements OnInit {
+  @Input() field: RaceTrackField = {};
 
-  constructor() { }
+  constructor() { 
+  
+  }
 
   ngOnInit(): void {
+    console.log(this.field);
+    
   }
 
 }

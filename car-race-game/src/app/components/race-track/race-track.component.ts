@@ -13,7 +13,7 @@ export class RaceTrackComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for(let i = 0; i < this.numberOfFields; i++) {
+    for(let i = 1; i <= this.numberOfFields; i++) {
       let field: RaceTrackField = {id: i};
       this.raceTrackFields.push(field);
     }
