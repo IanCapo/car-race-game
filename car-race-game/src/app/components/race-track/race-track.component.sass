@@ -6,9 +6,13 @@
 
     .race-track-field
         display: flex
-        border: 1px solid red
         flex-grow: 1
+        max-width: 8rem
+        &:first-child 
+            border-right: 1px solid red
+        &:last-child 
+            border-left: 1px solid black
 
         .start
-            width: 3rem
+            width: 8rem
       

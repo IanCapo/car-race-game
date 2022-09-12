@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { RaceTrackField }  from '../../RaceTrackField';
+import { Component, OnInit, Input } from '@angular/core';
+import { RaceTrackField }  from '../../Interfaces/RaceTrackField';
+import { Player } from '../../Interfaces/Player';
 
 @Component({
   selector: 'app-race-track',
@@ -8,17 +9,17 @@ import { RaceTrackField }  from '../../RaceTrackField';
 })
 
 export class RaceTrackComponent implements OnInit {
+  @Input() player: Player = {};
   public raceTrackFields: RaceTrackField[] = [];
   private numberOfFields = 10;
+  
+  
   constructor() { }
 
   ngOnInit(): void {
-    for(let p = 1; p <= 2; p++) {
     for(let i = 1; i <= this.numberOfFields; i++) {
-      let field: RaceTrackField = {id: i, playerId: p};
+      let field: RaceTrackField = {fieldId: i, playerId: this.player.id};
       this.raceTrackFields.push(field);
     }
-  }
-    console.log('race-track-fields', this.raceTrackFields);
   }
 }
