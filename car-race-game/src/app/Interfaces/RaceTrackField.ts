@@ -1,4 +1,4 @@
 export interface RaceTrackField {
-    id?: number;
+    fieldId?: number;
     playerId?: number;
 }

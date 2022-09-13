@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './components/board/board.component';
 import { RaceTrackComponent } from './components/race-track/race-track.component';
 import { RaceTrackFieldComponent } from './components/race-track-field/race-track-field.component';
+import { PlayerComponent } from './components/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
     RaceTrackComponent,
-    RaceTrackFieldComponent
+    RaceTrackFieldComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

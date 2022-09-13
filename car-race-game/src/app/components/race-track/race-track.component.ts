@@ -18,7 +18,7 @@ export class RaceTrackComponent implements OnInit {
 
   ngOnInit(): void {
     for(let i = 1; i <= this.numberOfFields; i++) {
-      let field: RaceTrackField = {fieldId: i, playerId: this.player.id};
+      let field: RaceTrackField = { fieldId: i, playerId: this.player.id };
       this.raceTrackFields.push(field);
     }
   }

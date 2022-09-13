@@ -7,14 +7,20 @@ import { Player } from '../../Interfaces/Player';
   styleUrls: ['./board.component.sass']
 })
 export class BoardComponent implements OnInit {
-  public players: Player[] = [];
-  private NumberOfPlayers: number = 2;
+  public players = [
+    {id: 1, name: 'player1' , position: 0 },
+    {id: 2, name: 'player2 ', position: 0 }
+   ];
+
   constructor() { }
 
   ngOnInit(): void {
-    for(let i = 1; i < this.NumberOfPlayers + 1; i++) {
-      let p: Player = {id: i, name: 'player ' + i, position: 0 } 
-      this.players.push(p)
+    this.setStep(1, 2)
+  }
+
+  public setStep(playerId: number, step: number) {
+    if(playerId > 0) {
+      this.players![playerId].position += step;
     }
   }
 }
