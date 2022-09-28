@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,qBAAqB;EAChC,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,gBAAgB,EAAE,KAAK;CACP",
+    "sources": [
+        "dice-roll.component.sass"
+    ],
+    "names": [],
+    "file": "dice-roll.component.css"
+}

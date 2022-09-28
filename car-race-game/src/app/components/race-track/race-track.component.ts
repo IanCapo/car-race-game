@@ -10,6 +10,7 @@ import { Player } from '../../Interfaces/Player';
 
 export class RaceTrackComponent implements OnInit {
   @Input() player: Player = {};
+  @Input() currentScore: number = 0
   public raceTrackFields: RaceTrackField[] = [];
   private numberOfFields = 10;
   
@@ -21,5 +22,7 @@ export class RaceTrackComponent implements OnInit {
       let field: RaceTrackField = { fieldId: i, playerId: this.player.id };
       this.raceTrackFields.push(field);
     }
+    console.log("RACE_TRACK_FIELD")
+    console.log(this.raceTrackFields)
   }
 }

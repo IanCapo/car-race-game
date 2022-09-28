@@ -1,0 +1,64 @@
+.board-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/race-stage.png");
+  background-position: center;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 19% 13% 17% 19% auto;
+      grid-template-rows: 20% 19% 13% 17% 19% auto;
+      grid-template-areas: "empty-top" "greenArea1" "track1" "greenArea2" "track2" "greenArea3";
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.board-container .player-one {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: track2;
+  left: 100px;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.board-container .player-two {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: track1;
+  right: 100px;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.board-container .game-control-container {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: greenArea2;
+}
+
+.slide {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: var(--newPosition);
+  -webkit-animation: slide 3s forwards;
+          animation: slide 3s forwards;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: var(--left);
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: var(--left);
+  }
+}
+/*# sourceMappingURL=board.component.css.map */

@@ -7,14 +7,33 @@
     display: grid
     grid-template-rows:  20% 19% 13% 17% 19% auto
     grid-template-areas: "empty-top" "greenArea1" "track1" "greenArea2" "track2" "greenArea3"
+    animation-fill-mode: forwards
 
     .player-one 
         display: grid
         grid-area: track2
+        left: 100px
+        animation-fill-mode: forwards
     
     .player-two
         display: grid
         grid-area: track1
-    
+        right: 100px
+        animation-fill-mode: forwards
+
     .game-control-container
         grid-area: greenArea2
+
+
+.slide 
+    position: absolute
+    width: 100px
+    height: 100px
+    left: var(--newPosition)
+    animation: slide 3s forwards
+    
+    
+@keyframes slide 
+    100%  
+        left: var(--left)
+    

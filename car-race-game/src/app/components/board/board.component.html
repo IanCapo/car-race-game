@@ -1,11 +1,26 @@
+
 <div class="board-container">
-    <app-race-track class="player-two" [player]="players[1]">
-    
-    </app-race-track>
+    <div class="player-two" >
+        <app-race-track  
+        [ngClass]="{slide: playerTurn?.isPlayer2Turn && playerTurn?.startPlay}"  
+        style="--left: {{player2NewPostion  + player2TotalPosition}}px; --newPosition: {{player2TotalPosition}}px" 
+        (animationend)="transitionEnd($event)"
+        [player]="players[1]" 
+        [currentScore]="playTotalScores?.player2TotalScroe ?? 0">
+        </app-race-track>
+
+    </div>
+
     <div class="game-control-container">
 
     </div>
-    <app-race-track class="player-one" [player]="players[0]">
-     
+    <div class="player-one">
+    <app-race-track [ngClass]="{slide: playerTurn?.isPlayer1Turn && playerTurn?.startPlay}"  
+    style="--left: {{player1NewPostion  + player1TotalPosition}}px; --newPosition: {{player1TotalPosition}}px" 
+    (animationend)="transitionEnd($event)"
+    [player]="players[0]"
+    [currentScore]="playTotalScores?.player1TotalScore ?? 0"> 
     </app-race-track>
+
+    </div>
 </div>

@@ -1,0 +1,35 @@
+<div class="question-text">{{question}}</div>
+<mat-radio-group 
+aria-label="answersRadioButton" 
+class="answers-radio-group"
+[(ngModel)]="chosenAnswer">
+
+    <mat-radio-button 
+    class="radio-button" 
+    *ngFor="let answer of answersArray" 
+    [value]="answer"
+    >{{answer}}
+</mat-radio-button>
+
+</mat-radio-group>
+<div class="submit-answer-container">
+
+    <button class="submit-button" (click)="sumbitAnswer(chosenAnswer)">Submit</button>
+
+    <ng-container *ngIf="shouldRevealAnswer; then revealAnswer"></ng-container>
+    <ng-template #revealAnswer>
+        <div *ngIf="isAnswerCorrect; then thenBlock; else elseBlock"></div>
+        <ng-template #thenBlock>
+            <div class="answer-revealed correct">Correct Answer</div>
+        </ng-template>
+    
+        <ng-template #elseBlock>
+            <div class="answer-revealed wrong">Correct Answer is: {{correctAnswer}}</div>
+        </ng-template>
+
+    </ng-template>
+
+</div>
+
+
+

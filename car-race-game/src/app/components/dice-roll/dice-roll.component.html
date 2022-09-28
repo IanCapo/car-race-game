@@ -1,0 +1,9 @@
+
+<div class="dice-container">
+    <div class="dice-wrapper">
+
+            <img [ngClass]="{shake: shakeIt}" class="dice-img" src="{{diceToShow}}" >
+
+        <button class="dice-button" (click)="shakeDice()">Shake Me!</button>
+    </div>
+</div>
