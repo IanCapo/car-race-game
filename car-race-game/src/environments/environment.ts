@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://the-trivia-api.com/api/questions?categories=film_and_tv,food_and_drink,general_knowledge&limit=20&difficulty=medium'
 };
 
 /*
